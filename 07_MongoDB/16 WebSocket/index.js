@@ -6,11 +6,11 @@ const http = require('http')
 const server = http.createServer(app); 
 const io = new Server(server);
 
-
 io.on("connection",(socket)=>{
 
       socket.on('message',(data)=>{
         io.emit('new-message',data);
+           // yha pr ye msg sbko broadcast krwa dega
       })
 
     // iska mtlb hai ye yha pr listen kr rha hai mtlb jb disconnect krna hoga to aise ho jaega
